@@ -14,7 +14,7 @@ let Basic = React.createClass({
             </div>
         )
     }
-})
+});
 ReactDOM.render((
     <Basic/>
 ), document.getElementById('cnt'));
