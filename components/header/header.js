@@ -9,7 +9,7 @@ let Header = React.createClass({
         return (
             <header className={style.hd} >
    <div className={style.blogIcon}>
-       <section className={userMes}>
+       <section className={style.userMes}>
            <img src={require("../../img/fang_head.jpg")} />
                <a href="localhost">
                    <hgroup>
@@ -25,4 +25,5 @@ let Header = React.createClass({
         </header>)
     }
 });
-module.exports = Header;
+// module.exports = Header;
+export default Header;

@@ -4,8 +4,10 @@
 module.exports = {
     entry: __dirname + '/js/main.js',
     output: {
+        // path:__dirname + '/build',
+        // publicPath: '/webBlog/build/',
         path:__dirname + '/build',
-        publicPath: '/webBlog/build/',
+        publicPath: '/',
         filename:'bundle.js'
     },
     module:{
@@ -22,7 +24,7 @@ module.exports = {
                 test: /\.css$/,
                 loader: "style-loader!css-loader?modules"
             },
-        /*    {
+           /* {
                 test: /\.(png|jpg|gif)$/,
                 loader: 'file-loader',
                 query:{
@@ -30,8 +32,8 @@ module.exports = {
                 }
             },*/{
                 test: /\.(png|jpg|gif)$/,
-                loader: 'url-loader?limit=5000&name=img/[name]-[hash:5].[ext]',
-            },
+                loader: 'url-loader?limit=5000&name=img/[name]-[hash:5].[ext]',/*看看urlloader打包图片在不同文件中（css,jsx,index.html中）的写法区别*/
+            }
         ],
     },
 };
