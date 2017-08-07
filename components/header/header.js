@@ -12,5 +12,5 @@ let Header = React.createClass({
                 <img src={require("../../img/small.png")} alt=""/>
         </header>)
     }
-})
+});
 module.exports = Header;
