@@ -2,28 +2,107 @@
  * Created by fang on 2017/8/6.
  */
 let React = require('react');
-import style from './article.css';
+// import style from './article.css';
+let articleCss = require('./article.css');
 
 let Article = React.createClass({
+
     render: function () {
         let Articles = [
-            {ArticleId: "1", ArticleName: "文章一",ArticleContent:"1",ArticleAuthor:"a1",ArticleImg:"../../img/article1.jpg"},
-            {ArticleId: "2", ArticleName: "文章二",ArticleContent:"2",ArticleAuthor:"a2",ArticleImg:"../../img/article2.jpg"}
+            {
+                ArticleId: "1",
+                ArticleName: "文章一",
+                ArticleContent: "1",
+                ArticleAuthor: "a1",
+                ArticleImg: require("../../img/article1.jpg")
+            },
+            {
+                ArticleId: "2",
+                ArticleName: "文章二",
+                ArticleContent: "2",
+                ArticleAuthor: "a2",
+                ArticleImg: require("../../img/article2.jpg")
+            },
+            {
+                ArticleId: "3",
+                ArticleName: "文章二",
+                ArticleContent: "2",
+                ArticleAuthor: "a2",
+                ArticleImg: require("../../img/article2.jpg")
+            },
+            {
+                ArticleId: "4",
+                ArticleName: "文章二",
+                ArticleContent: "2",
+                ArticleAuthor: "a2",
+                ArticleImg: require("../../img/article2.jpg")
+            },
+            {
+                ArticleId: "5",
+                ArticleName: "文章二",
+                ArticleContent: "2",
+                ArticleAuthor: "a2",
+                ArticleImg: require("../../img/article2.jpg")
+            },
+            {
+                ArticleId: "6",
+                ArticleName: "文章二",
+                ArticleContent: "2",
+                ArticleAuthor: "a2",
+                ArticleImg: require("../../img/article2.jpg")
+            },
+            {
+                ArticleId: "7",
+                ArticleName: "文章二",
+                ArticleContent: "2",
+                ArticleAuthor: "a2",
+                ArticleImg: require("../../img/article2.jpg")
+            },
+            {
+                ArticleId: "8",
+                ArticleName: "文章三",
+                ArticleContent: "3",
+                ArticleAuthor: "a3",
+                ArticleImg: require("../../img/article2.jpg")
+            }
+            // {ArticleId: "1", ArticleName: "文章一",ArticleContent:"1",ArticleAuthor:"a1" },
+            // {ArticleId: "2", ArticleName: "文章二",ArticleContent:"2",ArticleAuthor:"a2" }
         ];
+        let handleClick= function(param,event) {
+            //通过ref获取DOM节点
+            // console.log(this.refs[param]);
+            console.log('id',param);
+            console.log('event',event);
+        };
+        let nextPage=function (param,event) {
+            console.log('next',param);
+            console.log(event);
+        };
         return (
-            <div className={style.articleContent}>
-                <div className={style.articleList}>
-                    {
-                        Articles.map(function (item) {
-                            return (
-                                <li  key={item.ArticleId}>
-                                    <h2 className={style.articleTitle}><a href="#"> {item.ArticleName}</a> </h2>
-                                    <div className={style.articleContent}>{item.ArticleContent}</div>
-                                    <div className={style.articleAuthor}>{item.ArticleAuthor}</div>
-                                    <img className={style.articleImg} src={require(item.ArticleImg)} alt=""/>
-                                </li>
-                            )})
-                    }
+            <div >
+                <div className={articleCss.articleList}>
+                    <ul className={articleCss.articleUl}>
+                        {
+                            Articles.map(function (item) {
+                                return (
+                                    <li className={articleCss.articleLi} ref={item.ArticleId} key={item.ArticleId} onClick={handleClick.bind(this,item.ArticleId)}>
+                                        <div className={articleCss.currentArticle}>
+                                            <h2 className={articleCss.articleTitle}><a href="#"> {item.ArticleName}</a>
+                                            </h2>
+                                            <div className={articleCss.articleContext}>{item.ArticleContent}</div>
+                                            <div className={articleCss.articleAuthor}>{item.ArticleAuthor}</div>
+                                        </div>
+                                        <div className={articleCss.imgBox}>
+                                            <img className={articleCss.articleImg} src={item.ArticleImg} alt=""/>
+                                        </div>
+                                    </li>
+                                )
+                            })
+                        }
+                    </ul>
+                    <div className={articleCss.nextPage}>
+                       <a className={articleCss.nextPageContext} onClick={nextPage.bind(this,'next')}> 下一页</a>
+                    </div>
                 </div>
             </div>)
     }

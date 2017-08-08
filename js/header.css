@@ -1,0 +1,23 @@
+.hd {
+  height: 100vh;
+  background-size: 100%;
+  position: fixed;
+  width: 33.3%;
+}
+.userIcon {
+  width: 3vw;
+}
+.userMes {
+  margin-top: 5vh;
+  opacity: 1;
+  transition: opacity 1s;
+  text-align: center;
+}
+.routerContent {
+  margin-left: 33.33%;
+  height: 100vh;
+  background: white;
+  opacity: 1;
+  padding: 3vh;
+  overflow: scroll;
+}

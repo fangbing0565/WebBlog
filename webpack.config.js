@@ -7,11 +7,11 @@ module.exports = {
         // path:__dirname + '/build',
         // publicPath: '/webBlog/build/',
         path:__dirname + '/build',
-        publicPath: '/',
+        publicPath: '/build/',
         filename:'bundle.js'
     },
     module:{
-        loaders:[
+        rules:[
             {
                 test:/\.jsx?$/,
                 loader:'babel-loader'
@@ -30,9 +30,10 @@ module.exports = {
                 query:{
                     name:'img/[name]-[hash:5].[ext]'
                 }
-            },*/{
+            },*/
+           {
                 test: /\.(png|jpg|gif)$/,
-                loader: 'url-loader?limit=5000&name=img/[name]-[hash:5].[ext]',/*看看urlloader打包图片在不同文件中（css,jsx,index.html中）的写法区别*/
+                loader: 'url-loader?limit=5000&name=img/[name]-[hash:5].[ext]'/*看看url-loader打包图片在不同文件中（css,jsx,index.html中）的写法区别*/
             }
         ],
     },
