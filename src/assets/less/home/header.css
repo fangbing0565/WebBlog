@@ -1,3 +1,8 @@
+.homeContent {
+  background: url(/src/assets/img/webBg.jpg) no-repeat;
+  background-size: 100vw 100vh;
+  margin: 0;
+}
 .hd {
   height: 100vh;
   background-size: 100%;

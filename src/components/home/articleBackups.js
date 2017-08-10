@@ -6,7 +6,7 @@
  */
 let React = require('react');
 // import style from './article.css';
-let articleCss = require('./../assets/less/article.css');
+let articleCss = require('./../../assets/less/home/article.css');
 
 let Article = React.createClass({
 

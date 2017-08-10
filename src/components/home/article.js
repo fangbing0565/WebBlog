@@ -3,7 +3,7 @@
  */
 let React = require('react');
 // import style from './article.css';
-let articleCss = require('../assets/less/article.css');
+let articleCss = require('../../assets/less/home/article.css');
 
 let Article = React.createClass({
 
@@ -14,56 +14,56 @@ let Article = React.createClass({
                 ArticleName: "文章一",
                 ArticleContent: "1",
                 ArticleAuthor: "a1",
-                ArticleImg: require("../assets/img/article1.jpg")
+                ArticleImg: require("../../assets/img/article1.jpg")
             },
             {
                 ArticleId: "2",
                 ArticleName: "文章二",
                 ArticleContent: "2",
                 ArticleAuthor: "a2",
-                ArticleImg: require("../assets/img/article2.jpg")
+                ArticleImg: require("../../assets/img/article2.jpg")
             },
             {
                 ArticleId: "3",
                 ArticleName: "文章二",
                 ArticleContent: "2",
                 ArticleAuthor: "a2",
-                ArticleImg: require("../assets/img/article2.jpg")
+                ArticleImg: require("../../assets/img/article2.jpg")
             },
             {
                 ArticleId: "4",
                 ArticleName: "文章二",
                 ArticleContent: "2",
                 ArticleAuthor: "a2",
-                ArticleImg: require("../assets/img/article2.jpg")
+                ArticleImg: require("../../assets/img/article2.jpg")
             },
             {
                 ArticleId: "5",
                 ArticleName: "文章二",
                 ArticleContent: "2",
                 ArticleAuthor: "a2",
-                ArticleImg: require("../assets/img/article2.jpg")
+                ArticleImg: require("../../assets/img/article2.jpg")
             },
             {
                 ArticleId: "6",
                 ArticleName: "文章二",
                 ArticleContent: "2",
                 ArticleAuthor: "a2",
-                ArticleImg: require("../assets/img/article2.jpg")
+                ArticleImg: require("../../assets/img/article2.jpg")
             },
             {
                 ArticleId: "7",
                 ArticleName: "文章二",
                 ArticleContent: "2",
                 ArticleAuthor: "a2",
-                ArticleImg: require("../assets/img/article2.jpg")
+                ArticleImg: require("../../assets/img/article2.jpg")
             },
             {
                 ArticleId: "8",
                 ArticleName: "文章三",
                 ArticleContent: "3",
                 ArticleAuthor: "a3",
-                ArticleImg: require("../assets/img/article2.jpg")
+                ArticleImg: require("../../assets/img/article2.jpg")
             }
             // {ArticleId: "1", ArticleName: "文章一",ArticleContent:"1",ArticleAuthor:"a1" },
             // {ArticleId: "2", ArticleName: "文章二",ArticleContent:"2",ArticleAuthor:"a2" }

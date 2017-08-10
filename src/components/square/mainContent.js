@@ -1,16 +1,15 @@
 /**
- * Created by fang on 2017/8/9.
+ * Created by fang on 2017/8/8.
  */
-
 let React = require('react');
 let ReactDOM = require('react-dom');
 
-let headerCss = require('../assets/less/home/header.css');
+let headerCss = require('./assets/less/header.css');
 
 // import Header from  '../components/header/header.js';
 
-import Article from  './home/article.js';
-import ArticleDetails from  './home/articleDetails.js';
+import Article from  './components/home/article.js';
+import ArticleDetails from  './components/home/articleDetails.js';
 import {
     BrowserRouter as Router,
     Route,
@@ -22,15 +21,15 @@ let MainContent = React.createClass({
     render: function () {
 
         let logOut = function () {
-            // 清楚缓存   跳转到login
+
         };
         return (
             <Router>
-                <div className={headerCss.homeContent}>
+                <div>
                     <header className={headerCss.hd}>
                         <div className={headerCss.blogIcon}>
                             <section className={headerCss.userMes}>
-                                <img className={headerCss.userIcon} src={require("../assets/img/fang_head.jpg")}/>
+                                <img className={headerCss.userIcon} src={require("./assets/img/fang_head.jpg")}/>
                                 <a >
                                     <hgroup>
                                         <h1 name="fangBing">方兵的博客</h1>
@@ -57,18 +56,21 @@ let MainContent = React.createClass({
     }
 });
 
-let Home = React.createClass({
+let Basic = React.createClass({
     render: function () {
         return (
             <div>
+                {/*<Header/>*/}
                 <MainContent />
             </div>
         )
     }
 
 });
+ReactDOM.render((
+    <Basic/>
+), document.getElementById('cnt'));
 
-export default Home;
 
 /*
  this.props对象属性和PropsType属性一一对应
