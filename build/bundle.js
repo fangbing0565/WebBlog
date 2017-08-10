@@ -9022,11 +9022,11 @@ var Route = function (_React$Component) {
         render = _props.render,
         children = _props.children;
 
-    (0, _warning2.default)(!(component && render), 'You should not use <Route component> and <Route render> in the same route; <Route render> will be ignored');
+    (0, _warning2.default)(!(component && render), 'You should not use <Route component> and <Route render> in the same routes; <Route render> will be ignored');
 
-    (0, _warning2.default)(!(component && children), 'You should not use <Route component> and <Route children> in the same route; <Route children> will be ignored');
+    (0, _warning2.default)(!(component && children), 'You should not use <Route component> and <Route children> in the same routes; <Route children> will be ignored');
 
-    (0, _warning2.default)(!(render && children), 'You should not use <Route render> and <Route children> in the same route; <Route children> will be ignored');
+    (0, _warning2.default)(!(render && children), 'You should not use <Route render> and <Route children> in the same routes; <Route children> will be ignored');
   };
 
   Route.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps, nextContext) {
@@ -11805,76 +11805,88 @@ var headerCss = __webpack_require__(235);
 
 // import Header from  '../components/header/header.js';
 
-var MainContent = function MainContent() {
-    return React.createElement(
-        _reactRouterDom.BrowserRouter,
-        null,
-        React.createElement(
-            'div',
+var MainContent = React.createClass({
+    displayName: 'MainContent',
+
+
+    render: function render() {
+
+        var logOut = function logOut() {};
+        return React.createElement(
+            _reactRouterDom.BrowserRouter,
             null,
             React.createElement(
-                'header',
-                { className: headerCss.hd },
+                'div',
+                null,
                 React.createElement(
-                    'div',
-                    { className: headerCss.blogIcon },
+                    'header',
+                    { className: headerCss.hd },
                     React.createElement(
-                        'section',
-                        { className: headerCss.userMes },
-                        React.createElement('img', { className: headerCss.userIcon, src: __webpack_require__(237) }),
+                        'div',
+                        { className: headerCss.blogIcon },
                         React.createElement(
-                            'a',
-                            null,
+                            'section',
+                            { className: headerCss.userMes },
+                            React.createElement('img', { className: headerCss.userIcon, src: __webpack_require__(237) }),
                             React.createElement(
-                                'hgroup',
+                                'a',
                                 null,
                                 React.createElement(
-                                    'h1',
-                                    { name: 'fangBing' },
-                                    '\u65B9\u5175\u7684\u535A\u5BA2'
-                                ),
-                                React.createElement(
-                                    'h2',
+                                    'hgroup',
                                     null,
-                                    'Fang\'s Blog'
+                                    React.createElement(
+                                        'h1',
+                                        { name: 'fangBing' },
+                                        '\u65B9\u5175\u7684\u535A\u5BA2'
+                                    ),
+                                    React.createElement(
+                                        'h2',
+                                        null,
+                                        'Fang\'s Blog'
+                                    ),
+                                    React.createElement(
+                                        'div',
+                                        { onClick: logOut.bind() },
+                                        '\u9000\u51FA'
+                                    )
                                 )
-                            )
-                        )
-                    ),
-                    React.createElement(
-                        'ul',
-                        null,
-                        React.createElement(
-                            'li',
-                            null,
-                            React.createElement(
-                                _reactRouterDom.Link,
-                                { to: './article' },
-                                'Article'
                             )
                         ),
                         React.createElement(
-                            'li',
+                            'ul',
                             null,
                             React.createElement(
-                                _reactRouterDom.Link,
-                                { to: './articleDetails' },
-                                'articleDetails'
+                                'li',
+                                null,
+                                React.createElement(
+                                    _reactRouterDom.Link,
+                                    { to: './article' },
+                                    'Article'
+                                )
+                            ),
+                            React.createElement(
+                                'li',
+                                null,
+                                React.createElement(
+                                    _reactRouterDom.Link,
+                                    { to: './articleDetails' },
+                                    'articleDetails'
+                                )
                             )
                         )
                     )
+                ),
+                React.createElement(
+                    'div',
+                    { className: headerCss.routerContent },
+                    React.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _article2.default }),
+                    React.createElement(_reactRouterDom.Route, { path: '/article', component: _article2.default }),
+                    React.createElement(_reactRouterDom.Route, { path: '/articleDetails', component: _articleDetails2.default })
                 )
-            ),
-            React.createElement(
-                'div',
-                { className: headerCss.routerContent },
-                React.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _article2.default }),
-                React.createElement(_reactRouterDom.Route, { path: '/article', component: _article2.default }),
-                React.createElement(_reactRouterDom.Route, { path: '/articleDetails', component: _articleDetails2.default })
             )
-        )
-    );
-};
+        );
+    }
+});
 
 var Basic = React.createClass({
     displayName: 'Basic',
@@ -15323,7 +15335,7 @@ var PATH_REGEXP = new RegExp([
 // and optional suffixes. Matches appear as:
 //
 // "/:test(\\d+)?" => ["/", "test", "\d+", undefined, "?", undefined]
-// "/route(\\d+)"  => [undefined, undefined, undefined, "\d+", undefined, undefined]
+// "/routes(\\d+)"  => [undefined, undefined, undefined, "\d+", undefined, undefined]
 // "/*"            => ["/", undefined, undefined, undefined, undefined, "*"]
 '([\\/.])?(?:(?:\\:(\\w+)(?:\\(((?:\\\\.|[^\\\\()])+)\\))?|\\(((?:\\\\.|[^\\\\()])+)\\))([+*?])?|(\\*))'].join('|'), 'g');
 
@@ -15678,7 +15690,7 @@ function tokensToRegExp(tokens, keys, options) {
   // In non-strict mode we allow a slash at the end of match. If the path to
   // match already ends with a slash, we remove it for consistency. The slash
   // is valid at the end of a path match, not in the middle. This is important
-  // in non-ending mode, where "/test/" shouldn't match "/test//route".
+  // in non-ending mode, where "/test/" shouldn't match "/test//routes".
   if (!strict) {
     route = (endsWithDelimiter ? route.slice(0, -delimiter.length) : route) + '(?:' + delimiter + '(?=$))?';
   }

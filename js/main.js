@@ -8,43 +8,53 @@ let headerCss = require('./header.css');
 
 // import Header from  '../components/header/header.js';
 
-import Article from  '../components/article/article.js';
-import ArticleDetails from  '../components/articleDetails/articleDetails.js';
+import Article from  '../src/components/article/article.js';
+import ArticleDetails from  '../src/components/articleDetails/articleDetails.js';
 import {
     BrowserRouter as Router,
     Route,
     Link
 } from 'react-router-dom';
 
+let MainContent = React.createClass({
 
-const MainContent = () => (
-    <Router>
-        <div>
-            <header className={headerCss.hd}>
-                <div className={headerCss.blogIcon}>
-                    <section className={headerCss.userMes}>
-                        <img className={headerCss.userIcon} src={require("../img/fang_head.jpg")}/>
-                        <a >
-                            <hgroup>
-                                <h1 name="fangBing">方兵的博客</h1>
-                                <h2>Fang's Blog</h2>
-                            </hgroup>
-                        </a>
-                    </section>
-                    <ul>
-                        <li><Link to="./article">Article</Link></li>
-                        <li><Link to="./articleDetails">articleDetails</Link></li>
-                    </ul>
-                </div>
-            </header>
-            <div className={headerCss.routerContent}>
-                <Route exact path='/' component={Article}/>
-                <Route path='/article' component={Article}/>
-                <Route path='/articleDetails' component={ArticleDetails}/>
-            </div>
-        </div>
-    </Router>
-);
+        render: function () {
+
+            let logOut = function () {
+
+            };
+            return (
+                <Router>
+                    <div>
+                        <header className={headerCss.hd}>
+                            <div className={headerCss.blogIcon}>
+                                <section className={headerCss.userMes}>
+                                    <img className={headerCss.userIcon} src={require("./fang_head.jpg")}/>
+                                    <a >
+                                        <hgroup>
+                                            <h1 name="fangBing">方兵的博客</h1>
+                                            <h2>Fang's Blog</h2>
+                                            <div onClick={logOut.bind()}>
+                                                退出
+                                            </div>
+                                        </hgroup>
+                                    </a>
+                                </section>
+                                <ul>
+                                    <li><Link to="./article">Article</Link></li>
+                                    <li><Link to="./articleDetails">articleDetails</Link></li>
+                                </ul>
+                            </div>
+                        </header>
+                        <div className={headerCss.routerContent}>
+                            <Route exact path='/' component={Article}/>
+                            <Route path='/article' component={Article}/>
+                            <Route path='/articleDetails' component={ArticleDetails}/>
+                        </div>
+                    </div>
+                </Router>)
+        }
+    });
 
 let Basic = React.createClass({
     render: function () {
