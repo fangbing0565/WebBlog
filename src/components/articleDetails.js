@@ -3,7 +3,7 @@
  */
 let React = require('react');
 // import style from './header.css';
-let articleDetailsCss = require('./../../assets/less/articleDetails.css');
+let articleDetailsCss = require('./../assets/less/articleDetails.css');
 
 let ArticleDetails = React.createClass({
     render:function () {

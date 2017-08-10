@@ -2,7 +2,7 @@
  * Created by lhy on 2017/4/26.
  */
 module.exports = {
-    entry: __dirname + '/js/main.js',
+    entry: __dirname + '/src/app.js',
     output: {
         // path:__dirname + '/build',
         // publicPath: '/webBlog/build/',

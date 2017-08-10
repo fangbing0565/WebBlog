@@ -4,12 +4,12 @@
 let React = require('react');
 let ReactDOM = require('react-dom');
 
-let headerCss = require('./header.css');
+let headerCss = require('./assets/less/header.css');
 
 // import Header from  '../components/header/header.js';
 
-import Article from  '../src/components/article/article.js';
-import ArticleDetails from  '../src/components/articleDetails/articleDetails.js';
+import Article from  './components/article.js';
+import ArticleDetails from  './components/articleDetails.js';
 import {
     BrowserRouter as Router,
     Route,
@@ -29,7 +29,7 @@ let MainContent = React.createClass({
                         <header className={headerCss.hd}>
                             <div className={headerCss.blogIcon}>
                                 <section className={headerCss.userMes}>
-                                    <img className={headerCss.userIcon} src={require("./fang_head.jpg")}/>
+                                    <img className={headerCss.userIcon} src={require("./assets/img/fang_head.jpg")}/>
                                     <a >
                                         <hgroup>
                                             <h1 name="fangBing">方兵的博客</h1>

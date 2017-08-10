@@ -1,9 +1,12 @@
 /**
+ * Created by fang on 2017/8/9.
+ */
+/**
  * Created by fang on 2017/8/6.
  */
 let React = require('react');
 // import style from './article.css';
-let articleCss = require('./../../assets/less/article.css');
+let articleCss = require('./../assets/less/article.css');
 
 let Article = React.createClass({
 
@@ -101,7 +104,7 @@ let Article = React.createClass({
                         }
                     </ul>
                     <div className={articleCss.nextPage}>
-                       <a className={articleCss.nextPageContext} onClick={nextPage.bind(this,'next')}> 下一页</a>
+                        <a className={articleCss.nextPageContext} onClick={nextPage.bind(this,'next')}> 下一页</a>
                     </div>
                 </div>
             </div>)

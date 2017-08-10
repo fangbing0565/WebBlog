@@ -9022,11 +9022,11 @@ var Route = function (_React$Component) {
         render = _props.render,
         children = _props.children;
 
-    (0, _warning2.default)(!(component && render), 'You should not use <Route component> and <Route render> in the same routes; <Route render> will be ignored');
+    (0, _warning2.default)(!(component && render), 'You should not use <Route component> and <Route render> in the same route; <Route render> will be ignored');
 
-    (0, _warning2.default)(!(component && children), 'You should not use <Route component> and <Route children> in the same routes; <Route children> will be ignored');
+    (0, _warning2.default)(!(component && children), 'You should not use <Route component> and <Route children> in the same route; <Route children> will be ignored');
 
-    (0, _warning2.default)(!(render && children), 'You should not use <Route render> and <Route children> in the same routes; <Route children> will be ignored');
+    (0, _warning2.default)(!(render && children), 'You should not use <Route render> and <Route children> in the same route; <Route children> will be ignored');
   };
 
   Route.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps, nextContext) {
@@ -13919,8 +13919,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../node_modules/css-loader/index.js?modules!./article.css", function() {
-			var newContent = require("!!../../node_modules/css-loader/index.js?modules!./article.css");
+		module.hot.accept("!!../../../node_modules/css-loader/index.js?modules!./article.css", function() {
+			var newContent = require("!!../../../node_modules/css-loader/index.js?modules!./article.css");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -13938,21 +13938,21 @@ exports = module.exports = __webpack_require__(41)(undefined);
 
 
 // module
-exports.push([module.i, "._3KqY_AucZQpyb4JA4JOQSL {\n  padding: 0;\n}\n._3ANPikccO_DIBYVVFCIqrr {\n  list-style: none;\n  padding: 0;\n}\n._2xf4S71gRRnVmvkt6a5VBP {\n  padding: 5vh 5vh;\n  cursor: pointer;\n}\n._1L0VQfHfC4AMliXqFIhNuK {\n  width: 60%;\n  float: left;\n  display: inline-block;\n}\n._2jH6SbB2O79Qhsk0Zk375a {\n  font-size: 2vh;\n  line-height: 2vh;\n  margin-bottom: 1vh;\n}\n._f9b6qSaTl6dzl4jaN_CS {\n  height: 10vh;\n}\n._36se4RqK9sSbGGn7JQgZkB {\n  font-size: 1vh;\n}\n.j92Y1qnEgjD5ntGzVSn-m {\n  width: 40%;\n  display: inline-block;\n}\n._1dInod6a_VNWtCLaZBNKkJ {\n  float: right;\n  width: 100%;\n}\n._3FlXhMcrKs4qcAXg1oAxj0 {\n  padding: 0 ;\n  margin: 20px;\n}\n.IZp9107b6WjB-1Da-YcCa {\n  width: 200px;\n  border: 1px solid #ddd;\n  border-bottom: 1px solid #ddd!important;\n  border-radius: 5px;\n  background-color: #fff;\n  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05), 0 10px 75px 0 rgba(0, 0, 75, 0.125);\n  transition: background-color 0.3s ease-out, box-shadow 0.5s ease-out;\n  transition-delay: .1s;\n  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\n  padding: 1% 10%;\n  cursor: pointer;\n}\n.IZp9107b6WjB-1Da-YcCa :hover {\n  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05), 0 5px 120px 0 rgba(0, 0, 50, 0.35);\n}\n", ""]);
+exports.push([module.i, ".iWA41icH5JRUj_3EqWfa4 {\n  padding: 0;\n}\n._2SwOwtVrU3_sdm2n4uP4qK {\n  list-style: none;\n  padding: 0;\n}\n._2LKxcWKfZ3Zn8gD0ZB5OZc {\n  padding: 5vh 5vh;\n  cursor: pointer;\n}\n._3O5ozLayoHSanfk8Wa3ptr {\n  width: 60%;\n  float: left;\n  display: inline-block;\n}\n._2qGIHUQ1GyexUUV6XBwC2F {\n  font-size: 2vh;\n  line-height: 2vh;\n  margin-bottom: 1vh;\n}\n.kMV_PF9C6kz2hkI5PjnZu {\n  height: 10vh;\n}\n.PF1aedRzt_OMgZgYM4K3m {\n  font-size: 1vh;\n}\n._3_S--cwm1lk4yjMq0xbGJH {\n  width: 40%;\n  display: inline-block;\n}\n._3XT2tnceFpwroU7w_AfUk2 {\n  float: right;\n  width: 100%;\n}\n._2zDvOdeaZfUSGnLFx1MSul {\n  padding: 0 ;\n  margin: 20px;\n}\n._2LCWRgy8RIoBuSQpZNMSlk {\n  width: 200px;\n  border: 1px solid #ddd;\n  border-bottom: 1px solid #ddd!important;\n  border-radius: 5px;\n  background-color: #fff;\n  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05), 0 10px 75px 0 rgba(0, 0, 75, 0.125);\n  transition: background-color 0.3s ease-out, box-shadow 0.5s ease-out;\n  transition-delay: .1s;\n  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\n  padding: 1% 10%;\n  cursor: pointer;\n}\n._2LCWRgy8RIoBuSQpZNMSlk :hover {\n  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05), 0 5px 120px 0 rgba(0, 0, 50, 0.35);\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"articleList": "_3KqY_AucZQpyb4JA4JOQSL",
-	"articleUl": "_3ANPikccO_DIBYVVFCIqrr",
-	"articleLi": "_2xf4S71gRRnVmvkt6a5VBP",
-	"currentArticle": "_1L0VQfHfC4AMliXqFIhNuK",
-	"articleTitle": "_2jH6SbB2O79Qhsk0Zk375a",
-	"articleContext": "_f9b6qSaTl6dzl4jaN_CS",
-	"articleAuthor": "_36se4RqK9sSbGGn7JQgZkB",
-	"imgBox": "j92Y1qnEgjD5ntGzVSn-m",
-	"articleImg": "_1dInod6a_VNWtCLaZBNKkJ",
-	"nextPage": "_3FlXhMcrKs4qcAXg1oAxj0",
-	"nextPageContext": "IZp9107b6WjB-1Da-YcCa"
+	"articleList": "iWA41icH5JRUj_3EqWfa4",
+	"articleUl": "_2SwOwtVrU3_sdm2n4uP4qK",
+	"articleLi": "_2LKxcWKfZ3Zn8gD0ZB5OZc",
+	"currentArticle": "_3O5ozLayoHSanfk8Wa3ptr",
+	"articleTitle": "_2qGIHUQ1GyexUUV6XBwC2F",
+	"articleContext": "kMV_PF9C6kz2hkI5PjnZu",
+	"articleAuthor": "PF1aedRzt_OMgZgYM4K3m",
+	"imgBox": "_3_S--cwm1lk4yjMq0xbGJH",
+	"articleImg": "_3XT2tnceFpwroU7w_AfUk2",
+	"nextPage": "_2zDvOdeaZfUSGnLFx1MSul",
+	"nextPageContext": "_2LCWRgy8RIoBuSQpZNMSlk"
 };
 
 /***/ }),
@@ -14108,8 +14108,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../node_modules/css-loader/index.js?modules!./articleDetails.css", function() {
-			var newContent = require("!!../../node_modules/css-loader/index.js?modules!./articleDetails.css");
+		module.hot.accept("!!../../../node_modules/css-loader/index.js?modules!./articleDetails.css", function() {
+			var newContent = require("!!../../../node_modules/css-loader/index.js?modules!./articleDetails.css");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -14127,11 +14127,11 @@ exports = module.exports = __webpack_require__(41)(undefined);
 
 
 // module
-exports.push([module.i, "._8AVNXiAPsEf4LKsEPydDi {\n  color: red;\n}\n", ""]);
+exports.push([module.i, "._3L47ZGROkoqm8LarB6G_T6 {\n  color: red;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"detailsContent": "_8AVNXiAPsEf4LKsEPydDi"
+	"detailsContent": "_3L47ZGROkoqm8LarB6G_T6"
 };
 
 /***/ }),
@@ -15335,7 +15335,7 @@ var PATH_REGEXP = new RegExp([
 // and optional suffixes. Matches appear as:
 //
 // "/:test(\\d+)?" => ["/", "test", "\d+", undefined, "?", undefined]
-// "/routes(\\d+)"  => [undefined, undefined, undefined, "\d+", undefined, undefined]
+// "/route(\\d+)"  => [undefined, undefined, undefined, "\d+", undefined, undefined]
 // "/*"            => ["/", undefined, undefined, undefined, undefined, "*"]
 '([\\/.])?(?:(?:\\:(\\w+)(?:\\(((?:\\\\.|[^\\\\()])+)\\))?|\\(((?:\\\\.|[^\\\\()])+)\\))([+*?])?|(\\*))'].join('|'), 'g');
 
@@ -15690,7 +15690,7 @@ function tokensToRegExp(tokens, keys, options) {
   // In non-strict mode we allow a slash at the end of match. If the path to
   // match already ends with a slash, we remove it for consistency. The slash
   // is valid at the end of a path match, not in the middle. This is important
-  // in non-ending mode, where "/test/" shouldn't match "/test//routes".
+  // in non-ending mode, where "/test/" shouldn't match "/test//route".
   if (!strict) {
     route = (endsWithDelimiter ? route.slice(0, -delimiter.length) : route) + '(?:' + delimiter + '(?=$))?';
   }
@@ -27100,8 +27100,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../node_modules/css-loader/index.js?modules!./header.css", function() {
-			var newContent = require("!!../node_modules/css-loader/index.js?modules!./header.css");
+		module.hot.accept("!!../../../node_modules/css-loader/index.js?modules!./header.css", function() {
+			var newContent = require("!!../../../node_modules/css-loader/index.js?modules!./header.css");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -27119,14 +27119,14 @@ exports = module.exports = __webpack_require__(41)(undefined);
 
 
 // module
-exports.push([module.i, "._4GM6WhSOS3JZ6Klks0-rz {\n  height: 100vh;\n  background-size: 100%;\n  position: fixed;\n  width: 33.3%;\n}\n.LIpZB4ab-uvjFNY9bNLIn {\n  width: 3vw;\n}\n.pc0yFQeTkBYAE1o2FkUI_ {\n  margin-top: 5vh;\n  opacity: 1;\n  transition: opacity 1s;\n  text-align: center;\n}\n.pxtBXmF2bmfR7CY3q7esx {\n  margin-left: 33.33%;\n  height: 100vh;\n  background: white;\n  opacity: 1;\n  padding: 3vh;\n  overflow: scroll;\n}\n", ""]);
+exports.push([module.i, "._2tCPn1EkRXV_54hhCpSovN {\n  height: 100vh;\n  background-size: 100%;\n  position: fixed;\n  width: 33.3%;\n}\n._1TFdg6ToX4dMS_OPBByoQB {\n  width: 3vw;\n}\n._3Y49Lx82B1G-soJwZ3fh1a {\n  margin-top: 5vh;\n  opacity: 1;\n  transition: opacity 1s;\n  text-align: center;\n}\n.SES_bMy3TbyL9uN8U5N-1 {\n  margin-left: 33.33%;\n  height: 100vh;\n  background: white;\n  opacity: 1;\n  padding: 3vh;\n  overflow: scroll;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"hd": "_4GM6WhSOS3JZ6Klks0-rz",
-	"userIcon": "LIpZB4ab-uvjFNY9bNLIn",
-	"userMes": "pc0yFQeTkBYAE1o2FkUI_",
-	"routerContent": "pxtBXmF2bmfR7CY3q7esx"
+	"hd": "_2tCPn1EkRXV_54hhCpSovN",
+	"userIcon": "_1TFdg6ToX4dMS_OPBByoQB",
+	"userMes": "_3Y49Lx82B1G-soJwZ3fh1a",
+	"routerContent": "SES_bMy3TbyL9uN8U5N-1"
 };
 
 /***/ }),
