@@ -1,19 +1,16 @@
 /**
  * Created by fang on 2017/8/8.
  */
-import React from 'react';
-// import style from './header.css';
-// let articleDetailsCss = require('./../../assets/less/home/articleDetails.css');
-import './../../assets/less/home/articleDetails.less';
+import React from 'react'
+import '../../assets/less/home/articleDetails.less'
 
-let ArticleDetails = React.createClass({
-    render:function () {
+class ArticleDetails extends React.Component {
+    render() {
         return (
-        <div className="detailsContent">
-            详情
-        </div>
+            <div className="detailsContent">
+                详情
+            </div>
         )
     }
-});
-// module.exports = Header;
-export default ArticleDetails;
+}
+export default new ArticleDetails()

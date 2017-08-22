@@ -1,33 +1,27 @@
 /**
  * Created by fang on 2017/8/21.
  */
-import React from'react';
-import ReactDOM from 'react-dom';
-
-import './../../assets/less/home/header.less';
+import React from'react'
+import '../../assets/less/home/header.less'
 
 import {
-    BrowserRouter as Router,
-    Route,
-    Switch,
-    Fade,
     Link
-} from 'react-router-dom';
+} from 'react-router-dom'
 
 
-let Header = React.createClass({
+class Header extends React.Component {
 
-    render: function () {
+    render() {
 
         let logOut = function () {
-            window.open("/#/" ,'_self');
+            window.open('/#/', '_self')
             // 清楚缓存   跳转到login
-        };
+        }
         return (
             <header className="hd">
                 <div className="blogIcon">
                     <section className="userMes">
-                        <img className="userIcon" src={require("../../assets/img/fang_head.jpg")}/>
+                        <img className="userIcon" src={require('../../assets/img/fang_head.jpg')}/>
                         <a >
                             <hgroup>
                                 <h1 name="fangBing">方兵的博客</h1>
@@ -45,6 +39,9 @@ let Header = React.createClass({
                 </div>
             </header>
 
-        )}});
-export default Header;
+        )
+    }
+}
+
+export default new Header()
 

@@ -1,8 +1,8 @@
 var express = require('express'),
-  webpack = require('webpack'),
-  // favicon = require('express-favicon'),
-  config = require('./webpack.dev.conf.js'),
-  app = express();
+    webpack = require('webpack'),
+    // favicon = require('express-favicon'),
+    config = require('./webpack.dev.conf.js'),
+    app = express();
 
 var compiler = webpack(config);
 
@@ -16,14 +16,14 @@ app.use(require('connect-history-api-fallback')());
 
 // serve webpack bundle output
 app.use(require('webpack-dev-middleware')(compiler, {
-  noInfo: true,
-  publicPath: config.output.publicPath
+    noInfo: true,
+    publicPath: config.output.publicPath
 }));
 
 // enable hot-reload and state-preserving
 // compilation error display
 app.use(require('webpack-hot-middleware')(compiler));
 
-app.listen(9000, '127.0.0.1', function(err) {
-  err && console.log(err);
+app.listen(9000, '127.0.0.1', function (err) {
+    err && console.log(err);
 });

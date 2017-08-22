@@ -1,31 +1,26 @@
 /**
  * Created by lhy on 2017/7/25.
  */
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
 import {Provider} from 'react-redux'
-import {instanceOf} from 'prop-types';
-
-import {CookiesProvider, withCookies, Cookies} from 'react-cookie';
-import './assets/less/app.less';
-
-
-import LoginRoute from  './components/login.js';
-import HomeRoute from  './components/home.js';
-import SquareRoute from  './components/square.js';
-import Article from  './components/home/article.js';
-import ArticleDetails from  './components/home/articleDetails.js';
+import {instanceOf} from 'prop-types'
+import {CookiesProvider, Cookies} from 'react-cookie'
+import 'ASSET/less/app.less'
+import LoginRoute from 'COMPONENT/login'
+import HomeRoute from 'COMPONENT/home'
+import SquareRoute from 'COMPONENT/square'
+import store from 'STORE'
 import {
     BrowserRouter,
-    Route,
-    Link
-} from 'react-router-dom';
+    Route
+} from 'react-router-dom'
 
 
 class Basic extends React.Component {
     static propTypes = {
         cookies: instanceOf(Cookies).isRequired
-    };
+    }
 
     render() {
         return (
@@ -48,6 +43,6 @@ ReactDOM.render((
             <Basic/>
         </CookiesProvider>
     </Provider>
-), document.getElementById('cnt'));
+), document.getElementById('cnt'))
 
 

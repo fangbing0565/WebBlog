@@ -1,20 +1,16 @@
 /**
  * Created by fang on 2017/8/8.
  */
-import React from'react';
-import ReactDOM from 'react-dom';
+import React from'react'
+import ReactDOM from 'react-dom'
 
-import headerCss from'./../../assets/less/home/header.less';
-
-// import Header from  '../components/header/header.js';
-
-import Article from  './../../components/home/article.js';
-import ArticleDetails from  './../../components/home/articleDetails.js';
+import headerCss from'../../assets/less/home/header.less'
+import Article from  '../../components/home/article.js'
+import ArticleDetails from  '../../components/home/articleDetails.js'
 import {
-    BrowserRouter as Router,
     Route,
     Link
-} from 'react-router-dom';
+} from 'react-router-dom'
 
 let MainContent = React.createClass({
 
@@ -22,7 +18,7 @@ let MainContent = React.createClass({
 
         let logOut = function () {
 
-        };
+        }
         return (
             <Router>
                 <div>
@@ -54,39 +50,39 @@ let MainContent = React.createClass({
                 </div>
             </Router>)
     }
-});
+})
 
 let Basic = React.createClass({
     render: function () {
         return (
             <div>
-                {/*<Header/>*/}
                 <MainContent />
             </div>
         )
     }
 
-});
+})
+
 ReactDOM.render((
     <Basic/>
-), document.getElementById('cnt'));
+), document.getElementById('cnt'))
 
 
 /*
  this.props对象属性和PropsType属性一一对应
- let data = 123;
+ let data = 123
  let MyTitle = React.createClass({
  propTypes: {
  title: React.PropTypes.string.isRequired,
  },
  render: function() {
- return <h1> {this.props.title} </h1>;
+ return <h1> {this.props.title} </h1>
  }
- });
+ })
  ReactDOM.render(
  <MyTitle title={data} />,
  document.getElementById('example')
- );
+ )
 
  除了下面这个
  *this.props.children  没有 undefinded  一个 object  两个以上 array     React.Children.map  遍历子节点
@@ -96,20 +92,20 @@ ReactDOM.render((
  *
  * var LikeButton = React.createClass({
  getInitialState: function() {   //用户互动变化值用this.state
- return {liked: false};
+ return {liked: false}
  },
  handleClick: function(event) {
- this.setState({liked: !this.state.liked});
+ this.setState({liked: !this.state.liked})
  },
  render: function() {
- var text = this.state.liked ? 'like' : 'haven\'t liked';
+ var text = this.state.liked ? 'like' : 'haven\'t liked'
  return (
  <p onClick={this.handleClick}>
  You {text} this. Click to toggle.
  </p>
- );
+ )
  }
- });
+ })
  *
  * */
 

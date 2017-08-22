@@ -14,10 +14,10 @@ const store = createStore(
     applyMiddleware(...middlewares),
     ...enhancers
   )
-);
+)
 export default store
 
 // ======================================================
 // 增强版 history
 // ======================================================
-export const history = syncHistoryWithStore(store);
+export const history = syncHistoryWithStore(store)

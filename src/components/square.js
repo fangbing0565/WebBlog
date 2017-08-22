@@ -1,24 +1,20 @@
 /**
  * Created by fang on 2017/8/9.
  */
-import React from'react';
-import './../assets/less/square.less';
-
-import {
-    Link
-} from 'react-router-dom';
+import React from 'react'
+import '../assets/less/square.less'
 
 
-let SquareRoute = React.createClass({
-    render:function () {
+class SquareRoute extends React.Component {
+    render() {
         return (
             <div>
-          <div className="squareContent">
-              squareContent
-          </div>
+                <div className="squareContent">
+                    squareContent
+                </div>
             </div>
         )
     }
-});
-// module.exports = LoginRoute;
-export default SquareRoute;
+}
+
+export default new SquareRoute()
