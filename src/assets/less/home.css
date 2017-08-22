@@ -1,0 +1,13 @@
+.homeContent {
+  background: url(/src/assets/img/webBg.jpg) no-repeat;
+  background-size: 100vw 100vh;
+  margin: 0;
+}
+.footerContent {
+  margin-left: 33.33%;
+  height: 100vh;
+  background: white;
+  opacity: 1;
+  padding: 3vh;
+  overflow: scroll;
+}

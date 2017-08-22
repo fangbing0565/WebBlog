@@ -4,46 +4,40 @@
 let React = require('react');
 let ReactDOM = require('react-dom');
 
-let appCss = require('./assets/less/app.css');
+// let appCss = require('./assets/less/app.css');
+import './assets/less/app.less';
 
 
 import LoginRoute from  './components/login.js';
 import HomeRoute from  './components/home.js';
 import SquareRoute from  './components/square.js';
+import Article from  './components/home/article.js';
+import ArticleDetails from  './components/home/articleDetails.js';
 import {
-    BrowserRouter as Router,
+    BrowserRouter,
     Route,
     Link
 } from 'react-router-dom';
 
-let MainContent = React.createClass({
-
-        render: function () {
-            return (
-                <Router>
-                    <div>
-                        <div className={appCss.routerContent}>
-                            <Route exact path='/' component={LoginRoute}/>
-                            <Route path='/LoginRoute' component={LoginRoute}/>
-                            <Route path='/home' component={HomeRoute}/>
-                            <Route path='/square' component={SquareRoute}/>
-                        </div>
-                    </div>
-                </Router>)
-        }
-    });
-
 let Basic = React.createClass({
+
     render: function () {
         return (
-            <div>
-                <MainContent />
-            </div>
-        )
+            <BrowserRouter basename="/#">
+                <div>
+                    <div className="routerContent">
+                        <Route exact path='/' component={LoginRoute}/>
+                        <Route path='/LoginRoute' component={LoginRoute}/>
+                        <Route path='/home' component={HomeRoute}/>
+                        <Route path='/square' component={SquareRoute}/>
+                    </div>
+                </div>
+            </BrowserRouter>)
     }
-
 });
+
 ReactDOM.render((
     <Basic/>
 ), document.getElementById('cnt'));
+
 

@@ -2,8 +2,8 @@
  * Created by fang on 2017/8/6.
  */
 let React = require('react');
-// import style from './article.css';
-let articleCss = require('../../assets/less/home/article.css');
+import  '../../assets/less/home/article.less';
+// let articleCss = require('../../assets/less/home/article.css');
 
 let Article = React.createClass({
 
@@ -71,6 +71,7 @@ let Article = React.createClass({
         let handleClick= function(param,event) {
             //通过ref获取DOM节点
             // console.log(this.refs[param]);
+            window.open("/#/home/articleDetails/" +param);
             console.log('id',param);
             console.log('event',event);
         };
@@ -80,28 +81,28 @@ let Article = React.createClass({
         };
         return (
             <div >
-                <div className={articleCss.articleList}>
-                    <ul className={articleCss.articleUl}>
+                <div className="articleList">
+                    <ul className="articleUl">
                         {
                             Articles.map(function (item) {
                                 return (
-                                    <li className={articleCss.articleLi} ref={item.ArticleId} key={item.ArticleId} onClick={handleClick.bind(this,item.ArticleId)}>
-                                        <div className={articleCss.currentArticle}>
-                                            <h2 className={articleCss.articleTitle}><a href="#"> {item.ArticleName}</a>
+                                    <li className="articleLi" ref={item.ArticleId} key={item.ArticleId} onClick={handleClick.bind(this,item.ArticleId)}>
+                                        <div className="currentArticle">
+                                            <h2 className="articleTitle"><a href="#"> {item.ArticleName}</a>
                                             </h2>
-                                            <div className={articleCss.articleContext}>{item.ArticleContent}</div>
-                                            <div className={articleCss.articleAuthor}>{item.ArticleAuthor}</div>
+                                            <div className="articleContext">{item.ArticleContent}</div>
+                                            <div className="articleAuthor">{item.ArticleAuthor}</div>
                                         </div>
-                                        <div className={articleCss.imgBox}>
-                                            <img className={articleCss.articleImg} src={item.ArticleImg} alt=""/>
+                                        <div className="imgBox">
+                                            <img className="articleImg" src={item.ArticleImg} alt=""/>
                                         </div>
                                     </li>
                                 )
                             })
                         }
                     </ul>
-                    <div className={articleCss.nextPage}>
-                       <a className={articleCss.nextPageContext} onClick={nextPage.bind(this,'next')}> 下一页</a>
+                    <div className="nextPage">
+                       <a className="nextPageContext" onClick={nextPage.bind(this,'next')}> 下一页</a>
                     </div>
                 </div>
             </div>)

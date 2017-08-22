@@ -5,68 +5,44 @@
 let React = require('react');
 let ReactDOM = require('react-dom');
 
-let headerCss = require('../assets/less/home/header.css');
+// let headerCss = require('../assets/less/home/header.css');
+import '../assets/less/home.less';
 
 // import Header from  '../components/header/header.js';
 
 import Article from  './home/article.js';
 import ArticleDetails from  './home/articleDetails.js';
+import Header from  './home/header.js';
 import {
     BrowserRouter as Router,
     Route,
+    Switch,
+    Fade,
     Link
 } from 'react-router-dom';
 
-let MainContent = React.createClass({
+let Home = React.createClass({
 
     render: function () {
 
         let logOut = function () {
             // 清楚缓存   跳转到login
         };
-        return (
-            <Router>
-                <div className={headerCss.homeContent}>
-                    <header className={headerCss.hd}>
-                        <div className={headerCss.blogIcon}>
-                            <section className={headerCss.userMes}>
-                                <img className={headerCss.userIcon} src={require("../assets/img/fang_head.jpg")}/>
-                                <a >
-                                    <hgroup>
-                                        <h1 name="fangBing">方兵的博客</h1>
-                                        <h2>Fang's Blog</h2>
-                                        <div onClick={logOut.bind()}>
-                                            退出
-                                        </div>
-                                    </hgroup>
-                                </a>
-                            </section>
-                            <ul>
-                                <li><Link to="./article">Article</Link></li>
-                                <li><Link to="./articleDetails">articleDetails</Link></li>
-                            </ul>
-                        </div>
-                    </header>
-                    <div className={headerCss.routerContent}>
-                        <Route exact path='/' component={Article}/>
-                        <Route path='/article' component={Article}/>
-                        <Route path='/articleDetails' component={ArticleDetails}/>
-                    </div>
-                </div>
-            </Router>)
-    }
-});
+        let articleId;
 
-let Home = React.createClass({
-    render: function () {
         return (
-            <div>
-                <MainContent />
+            <div className="homeContent">
+                <Header />
+                <div className="footerContent">
+                    <Route exact path="/home" component={Article}/>
+                    <Route path="/home/article" component={Article}/>
+                    <Route path={"/home/articleDetails/:id"} component={ArticleDetails}/>
+                </div>
             </div>
         )
     }
-
 });
+
 
 export default Home;
 

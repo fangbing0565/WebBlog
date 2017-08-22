@@ -21,9 +21,14 @@ module.exports = {
                 }*/
             },
             {
-                test: /\.css$/,
-                loader: "style-loader!css-loader?modules"
+                test: /\.(css|less)$/,
+                use: ['style-loader', 'css-loader?sourceMap', 'less-loader'],
             },
+            {
+                test: /\.styl$/,
+                use: ['style-loader', 'css-loader?sourceMap', 'stylus-loader'],
+            },
+
            /* {
                 test: /\.(png|jpg|gif)$/,
                 loader: 'file-loader',
