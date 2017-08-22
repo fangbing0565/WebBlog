@@ -71,7 +71,7 @@ let Article = React.createClass({
         let handleClick= function(param,event) {
             //通过ref获取DOM节点
             // console.log(this.refs[param]);
-            window.open("/#/home/articleDetails/" +param);
+            window.open("/#/home/articleDetails/" +param ,'_self');
             console.log('id',param);
             console.log('event',event);
         };

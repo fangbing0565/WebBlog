@@ -3,7 +3,9 @@
  */
 let React = require('react');
 let ReactDOM = require('react-dom');
+import {instanceOf} from 'prop-types';
 
+import {CookiesProvider, withCookies, Cookies} from 'react-cookie';
 // let appCss = require('./assets/less/app.css');
 import './assets/less/app.less';
 
@@ -18,10 +20,12 @@ import {
     Route,
     Link
 } from 'react-router-dom';
+class Basic extends React.Component {
+    static propTypes = {
+        cookies: instanceOf(Cookies).isRequired
+    };
 
-let Basic = React.createClass({
-
-    render: function () {
+    render() {
         return (
             <BrowserRouter basename="/#">
                 <div>
@@ -34,10 +38,12 @@ let Basic = React.createClass({
                 </div>
             </BrowserRouter>)
     }
-});
+}
 
 ReactDOM.render((
-    <Basic/>
+    <CookiesProvider>
+        <Basic/>
+    </CookiesProvider>
 ), document.getElementById('cnt'));
 
 

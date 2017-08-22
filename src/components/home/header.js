@@ -21,7 +21,7 @@ let Header = React.createClass({
     render: function () {
 
         let logOut = function () {
-            window.open("/#/");
+            window.open("/#/" ,'_self');
             // 清楚缓存   跳转到login
         };
         return (
