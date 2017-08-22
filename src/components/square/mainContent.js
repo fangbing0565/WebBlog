@@ -1,15 +1,15 @@
 /**
  * Created by fang on 2017/8/8.
  */
-let React = require('react');
-let ReactDOM = require('react-dom');
+import React from'react';
+import ReactDOM from 'react-dom';
 
-let headerCss = require('./assets/less/header.css');
+import headerCss from'./../../assets/less/home/header.less';
 
 // import Header from  '../components/header/header.js';
 
-import Article from  './components/home/article.js';
-import ArticleDetails from  './components/home/articleDetails.js';
+import Article from  './../../components/home/article.js';
+import ArticleDetails from  './../../components/home/articleDetails.js';
 import {
     BrowserRouter as Router,
     Route,

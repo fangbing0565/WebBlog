@@ -1,10 +1,9 @@
 /**
  * Created by fang on 2017/8/21.
  */
-let React = require('react');
-let ReactDOM = require('react-dom');
+import React from'react';
+import ReactDOM from 'react-dom';
 
-// let headerCss = require('../assets/less/home/header.css');
 import './../../assets/less/home/header.less';
 
 import {

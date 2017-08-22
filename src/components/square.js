@@ -1,9 +1,9 @@
 /**
  * Created by fang on 2017/8/9.
  */
-let React = require('react');
+import React from'react';
 import './../assets/less/square.less';
-// let squareCss = require('./../assets/less/square.css');
+
 import {
     Link
 } from 'react-router-dom';

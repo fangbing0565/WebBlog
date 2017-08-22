@@ -1,7 +1,7 @@
 /**
  * Created by fang on 2017/8/6.
  */
-let React = require('react');
+import React from'react';
 import  '../../assets/less/home/article.less';
 // let articleCss = require('../../assets/less/home/article.css');
 

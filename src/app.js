@@ -1,12 +1,12 @@
 /**
  * Created by lhy on 2017/7/25.
  */
-let React = require('react');
-let ReactDOM = require('react-dom');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux'
 import {instanceOf} from 'prop-types';
 
 import {CookiesProvider, withCookies, Cookies} from 'react-cookie';
-// let appCss = require('./assets/less/app.css');
 import './assets/less/app.less';
 
 
@@ -20,6 +20,8 @@ import {
     Route,
     Link
 } from 'react-router-dom';
+
+
 class Basic extends React.Component {
     static propTypes = {
         cookies: instanceOf(Cookies).isRequired
@@ -41,9 +43,11 @@ class Basic extends React.Component {
 }
 
 ReactDOM.render((
-    <CookiesProvider>
-        <Basic/>
-    </CookiesProvider>
+    <Provider store={store}>
+        <CookiesProvider>
+            <Basic/>
+        </CookiesProvider>
+    </Provider>
 ), document.getElementById('cnt'));
 
 
