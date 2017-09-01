@@ -16,10 +16,13 @@ import SquareRoute from  './components/square.js';
 import Article from  './components/home/article.js';
 import ArticleDetails from  './components/home/articleDetails.js';
 import {
-    BrowserRouter,
+    browserHistory,Router,
     Route,
     Link
 } from 'react-router-dom';
+import history from './routes/history'
+history.pushState(null,null,'/');
+
 class Basic extends React.Component {
     static propTypes = {
         cookies: instanceOf(Cookies).isRequired
@@ -27,7 +30,7 @@ class Basic extends React.Component {
 
     render() {
         return (
-            <BrowserRouter basename="/#">
+            <Router history={history} >
                 <div>
                     <div className="routerContent">
                         <Route exact path='/' component={LoginRoute}/>
@@ -36,7 +39,7 @@ class Basic extends React.Component {
                         <Route path='/square' component={SquareRoute}/>
                     </div>
                 </div>
-            </BrowserRouter>)
+            </Router>)
     }
 }
 
@@ -44,6 +47,6 @@ ReactDOM.render((
     <CookiesProvider>
         <Basic/>
     </CookiesProvider>
-), document.getElementById('cnt'));
+), document.getElementById('app'));
 
 

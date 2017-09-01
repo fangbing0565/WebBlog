@@ -5,6 +5,9 @@ let React = require('react');
 import  '../../assets/less/home/article.less';
 // let articleCss = require('../../assets/less/home/article.css');
 
+import history from './../../routes/history'
+history.pushState(null,'/article');
+
 let Article = React.createClass({
 
     render: function () {
@@ -71,7 +74,8 @@ let Article = React.createClass({
         let handleClick= function(param,event) {
             //通过ref获取DOM节点
             // console.log(this.refs[param]);
-            window.open("/#/home/articleDetails/" +param ,'_self');
+            history.pushState(null,null,'/articleDetails/'+param);
+            // window.open("/home/articleDetails/" +param ,'_self');
             console.log('id',param);
             console.log('event',event);
         };

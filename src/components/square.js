@@ -7,6 +7,8 @@ import './../assets/less/square.less';
 import {
     Link
 } from 'react-router-dom';
+import history from './../routes/history'
+// history.pushState(null,null,'/square');
 
 
 let SquareRoute = React.createClass({

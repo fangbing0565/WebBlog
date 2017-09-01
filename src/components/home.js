@@ -21,6 +21,9 @@ import {
     Link
 } from 'react-router-dom';
 
+import history from './../routes/history'
+// history.pushState(null,null,'/home');
+
 let Home = React.createClass({
 
     render: function () {

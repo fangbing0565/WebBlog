@@ -5,6 +5,8 @@ let React = require('react');
 // import style from './header.css';
 // let articleDetailsCss = require('./../../assets/less/home/articleDetails.css');
 import './../../assets/less/home/articleDetails.less';
+import history from './../../routes/history';
+history.pushState(null,null,'/articleDetails');
 
 let ArticleDetails = React.createClass({
     render:function () {
