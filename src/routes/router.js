@@ -1,6 +1,7 @@
-/**
+/*
+/!**
  * Created by fang on 2017/8/31.
- */
+ *!/
 !function (exports, module, win) {
 
     class Router {
@@ -68,3 +69,4 @@
         return 'hash';
     }
 }(undefined, undefined, window);
+*/

@@ -7,7 +7,8 @@ import './../assets/less/square.less';
 import {
     Link
 } from 'react-router-dom';
-import history from './../routes/history'
+import { createHistory } from 'history'
+const history = createHistory();
 // history.pushState(null,null,'/square');
 
 

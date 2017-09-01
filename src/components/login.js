@@ -9,7 +9,8 @@ import {CookiesProvider, withCookies, Cookies} from 'react-cookie';
 import {
     Link
 } from 'react-router-dom';
-import history from './../routes/history'
+import { createHistory } from 'history'
+const history = createHistory();
 // history.pushState(null,null,'/login');
 
 class LoginRoute extends React.Component {
