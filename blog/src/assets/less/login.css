@@ -1,0 +1,26 @@
+.loginContent {
+  margin: 20vh auto;
+  max-width: 300px;
+  padding: 5vh;
+}
+.indexLogo {
+  margin: 0 auto;
+  width: 160px;
+  height: 74px;
+  background: url('../../../public/img/qicheng_logo.png') no-repeat;
+  background-size: contain;
+}
+.footer {
+  position: fixed;
+  margin: auto;
+  width: 100%;
+  padding: 5vh;
+  bottom: 0;
+  font-size: 12px;
+  line-height: 21px;
+  text-align: center;
+  color: #aebdc9;
+}
+.dot {
+  margin: 0 3px;
+}
